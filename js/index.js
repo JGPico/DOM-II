@@ -93,3 +93,25 @@ extraBChange.forEach(el => {
         el.style.backgroundColor = 'white';
     })
 })
+
+// green sock
+document.querySelectorAll('.destination').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        gsap.to(el, {
+            duration: 2,
+            rotate: 180,
+            ease: 'elastic(1, 0.75)'
+        })
+    })
+})
+
+document.querySelectorAll('.destination').forEach(el => {
+    el.addEventListener('mouseleave', () => {
+        gsap.to(el, {
+            duration: 2,
+            rotate: 0,
+            ease: 'elastic(1, 0.75)'
+        })
+    })
+})
+
