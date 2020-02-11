@@ -78,3 +78,18 @@ pChange.forEach(el => {
         el.style.fontWeight = 'bold';
     })
 })
+
+// event 10
+
+const extraBChange = document.querySelectorAll('.destination');
+extraBChange.forEach(el => {
+    el.addEventListener('mouseover', () => {
+        el.style.backgroundColor = 'lightgrey';
+    })
+})
+
+extraBChange.forEach(el => {
+    el.addEventListener('mouseout', () => {
+        el.style.backgroundColor = 'white';
+    })
+})
