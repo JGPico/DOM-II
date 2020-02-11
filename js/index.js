@@ -10,13 +10,28 @@ introH2.addEventListener('click', (event) => {
 
 const introBox = document.querySelector('.intro');
 
-introBox.addEventListener('click', () => {
+introBox.addEventListener('click', (event) => {
     introBox.style.backgroundColor = 'grey';
+    event.stopPropagation();
 });
 
 // prevent default for home click
 
-// const stopLink = document.querySelector('.nav-link');
-// stopLink.addEventListener('click', (event) => {
-//     event.preventDefault();
-// });
+const stopLink = document.querySelector('.nav-link');
+stopLink.addEventListener('click', (event) => {
+    event.preventDefault();
+});
+
+// event 2
+
+document.querySelectorAll('h2').forEach( el => {
+    el.addEventListener('mouseenter', () => {
+        el.style.color = 'blue';
+    });
+});
+
+// event 3
+const imgChange = document.querySelector('.img-content img');
+imgChange.addEventListener('mouseleave', () => {
+    imgChange.src = 'img/bus2.jpg';
+});
