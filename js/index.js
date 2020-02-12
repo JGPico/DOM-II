@@ -56,12 +56,14 @@ const imgResize = document.querySelector('.inverse-content img');
 window.addEventListener('resize', () => {
     imgResize.style.transform = 'scale(1.2)';
     imgResize.style.transition = 'transform 0.3s';
+    document.querySelector('.main-navigation').style.zIndex = '1';
 })
 
 // event 7
 window.addEventListener('scroll', () => {
     imgResize.style.transform = 'scale(1)';
     imgResize.style.transition = 'transform 0.3s';
+    document.querySelector('.main-navigation').style.zIndex = '1';
 })
 
 // event 8
@@ -80,7 +82,6 @@ pChange.forEach(el => {
 })
 
 // event 10
-
 const extraBChange = document.querySelectorAll('.destination');
 extraBChange.forEach(el => {
     el.addEventListener('mouseover', () => {
@@ -99,7 +100,7 @@ document.querySelectorAll('.destination').forEach(el => {
     el.addEventListener('mouseenter', () => {
         gsap.to(el, {
             duration: 2,
-            rotate: 180,
+            rotateY: 180,
             ease: 'elastic(1, 0.75)'
         })
     })
@@ -109,7 +110,7 @@ document.querySelectorAll('.destination').forEach(el => {
     el.addEventListener('mouseleave', () => {
         gsap.to(el, {
             duration: 2,
-            rotate: 0,
+            rotateY: 0,
             ease: 'elastic(1, 0.75)'
         })
     })
